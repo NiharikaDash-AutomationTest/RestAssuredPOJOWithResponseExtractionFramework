@@ -1,0 +1,25 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.893 sec <<< FAILURE!
+foo(TestCases.TestCase1)  Time elapsed: 0.404 sec  <<< FAILURE!
+java.lang.NoClassDefFoundError: com/fasterxml/jackson/core/exc/InputCoercionException
+	at com.fasterxml.jackson.databind.deser.BasicDeserializerFactory.createMapDeserializer(BasicDeserializerFactory.java:1375)
+	at com.fasterxml.jackson.databind.deser.DeserializerCache._createDeserializer2(DeserializerCache.java:387)
+	at com.fasterxml.jackson.databind.deser.DeserializerCache._createDeserializer(DeserializerCache.java:349)
+	at com.fasterxml.jackson.databind.deser.DeserializerCache._createAndCache2(DeserializerCache.java:264)
+	at com.fasterxml.jackson.databind.deser.DeserializerCache._createAndCacheValueDeserializer(DeserializerCache.java:244)
+	at com.fasterxml.jackson.databind.deser.DeserializerCache.findValueDeserializer(DeserializerCache.java:142)
+	at com.fasterxml.jackson.databind.DeserializationContext.findRootValueDeserializer(DeserializationContext.java:491)
+	at com.fasterxml.jackson.databind.ObjectMapper._findRootDeserializer(ObjectMapper.java:4713)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4522)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3333)
+	at Serialization_DataBinding_Classes.ObjectMapperTest.readJson(ObjectMapperTest.java:22)
+	at TestCases.TestCase1.foo(TestCase1.java:21)
+Caused by: java.lang.ClassNotFoundException: com.fasterxml.jackson.core.exc.InputCoercionException
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:338)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 46 more
+

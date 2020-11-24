@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Command line suite]">
+  <test name="Command line test" preserve-order="false">
+    <classes>
+      <class name="Serialization_DataBinding_Classes.ObjectMapperTest"/>
+      <class name="TestCases.TestCase1"/>
+      <class name="TestCases.TestCase2"/>
+    </classes>
+  </test> <!-- Command line test -->
+  <test name="Command line test(failed)">
+    <classes>
+      <class name="TestCases.TestCase1">
+        <methods>
+          <include name="foo"/>
+        </methods>
+      </class> <!-- TestCases.TestCase1 -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Command line suite] -->
